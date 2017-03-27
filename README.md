@@ -29,21 +29,6 @@ You must give a full effort on every group and individual project.
 
 [Slack Room (SSM please update)](http://updateme.com)
 
-[Absence Request Form](https://docs.google.com/forms/d/1raQkqL-QjLOEy6CzeC_TXGX-hvKZ3ncrfYYxK9fwREQ/viewform)
-
-[Student x Student Tutoring Form](https://docs.google.com/forms/d/1fXbpAgtWnEv_pSz1xoddo0-3dqoAXAn1fOyOv29YBi8/viewform)
-
-
-
------------------------------------------
-
-## Assessments and Study Guides
-
-
-
------------------------------------------
-## New! Review Videos
-
 -----------------------------------------
 
 [Homework Submission](http://bootcampspot.com)
