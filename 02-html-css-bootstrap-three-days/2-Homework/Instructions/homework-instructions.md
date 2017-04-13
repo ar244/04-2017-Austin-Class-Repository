@@ -51,7 +51,7 @@ You will be fully capable of doing this homework by the end of Saturday's class.
 
 3. Deploy your new Bootstrap-powered portfolio to Github Pages.
 
-### Submitting Your Work on [BootcampSpot.com](http://bootcampspot.com/)
+### Submitting Your Work on [BootcampSpot-v2.com](http://www.bootcampspot-v2.com/)
 
 1. Submit the GitHub links to your portfolio repositories on GitHub.
 
