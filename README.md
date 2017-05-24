@@ -127,5 +127,4 @@ Live Office Hours: 45 minutes before class and 30 minutes after class
 |	23.1	|	Sat, Sep 23, 2017	|	Sat, Sep 23, 2017	|	Three Programming Languages (Ruby)	|																							
 |	23.2	|	Mon, Sep 25, 2017	|	Tue, Sep 26, 2017	|	Three Programming Languages (Java)	|																							
 |	23.3	|	Wed, Sep 27, 2017	|	Thu, Sep 28, 2017	|	Three Programming Languages (Python)	|																							
-|		|	Sat, Sep 30, 2017	|	Sat, Sep 30, 2017	|	Final Project Presentations	|																							
-|		|		|		|	DEMO DAY (TBD)	|																							
+|		|	Sat, Sep 30, 2017	|	Sat, Sep 30, 2017	|	Final Project Presentations	|																																											
