@@ -1,0 +1,6 @@
+-this gotchas (this inside a nested function in an object, etc)
+-bind
+-call
+-apply
+-map
+-reduce
