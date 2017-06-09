@@ -4,3 +4,11 @@
 -apply
 -map
 -reduce
+-Object.assign(obj1, obj2);
+https://stackoverflow.com/questions/171251/how-can-i-merge-properties-of-two-javascript-objects-dynamically
+
+
+es6:
+
+-let
+-arrow funcs
