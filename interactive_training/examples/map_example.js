@@ -57,9 +57,7 @@ function runExplanationSeries(
 
 
 var list_code = "var list = [1, 2, 3, 4, 5];"
-// eval(list_code);
-
-var list = [1, 2, 3, 4, 5];
+eval(list_code);
 
 let literal = "var house_pets = ['cat', 'dog', 'zebra'];\n\n\
 house_pets.map(function(beast) {\n\
@@ -79,11 +77,11 @@ function('zebra') {\n\
 }\n\n\
 "
 
-let double_items = "var list = [1, 2, 3, 4, 5];\n\n\
+let double_items = `${list_code}\n\n\
 let doubled_list = list.map(function(number) {\n\
     let doubled = number * 2;\n\
     delayedPrint(doubled);\n\
-});"
+});`
 
 let iterate_over_items = "list.map(function(this_list_item) {\n\
     delayedPrint(this_list_item);\n\
