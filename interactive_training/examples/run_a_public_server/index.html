@@ -1,0 +1,56 @@
+<head>
+
+    <style>
+        .inline-code {
+            margin-left: 40px;
+        }
+        #container {
+            margin-left: 60px;
+            margin-top: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2 style="text-align: center">Run your websites on a public server in 2 minutes</h2>
+
+    <div id="container">
+        <p><a target="_blank" href="https://ngrok.com/">Ngrok</a> is a secure way to make your website accessible on the web.</p>
+
+        <p>First, install it with:</p>
+
+        <code class="inline-code">npm install -g ngrok</code>
+
+        <p>Run the server you want to expose on your local machine. Let's say you have a nodejs server named <code>server.js</code>:</p>
+
+        <code class="inline-code">node server.js</code>
+
+        <p>You can run ngrok like:</p>
+
+        <code class="inline-code">ngrok http -host-header=localhost {port}</code>
+
+        <p>Let's say the node server is now running on port <code>8080</code>. You can run it publicly with:</p>
+
+        <code class="inline-code">ngrok http -host-header=localhost 8080</code>
+
+        <p>Notice the output has a line like:</p>
+
+        <code class="inline-code">Forwarding&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://ad5444a3.ngrok.io -> localhost:8080</code>
+
+        <p>Visit that <code>http://{random_id}.ngrok.io</code> address that your terminal outputted and you should now see your website. Test it on your phone</p>
+
+        <p>To practice, run the server in this folder with:</p>
+
+        <code class="inline-code">npm i -g express</code><br/><br/>
+        <code class="inline-code">node server.js</code>
+
+        <p>Open a new terminal, and run:</p>
+
+        <code class="inline-code">ngrok http -host-header=localhost 8080</code>
+
+        <p>Visit <code>http://{random_id}.ngrok.io/index.html</code> on your laptop of phone and see this page</p>
+        <br/><br/>
+    </div>
+
+</body>
