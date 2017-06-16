@@ -40,8 +40,17 @@
 
         <p>Visit that <code>http://{random_id}.ngrok.io</code> address that your terminal outputted and you should now see your website. Test it on your phone</p>
 
-        <p>Some tutorials on ngrok won't give the full command, but <a target="_blank" href="https://stackoverflow.com/questions/30618415/bad-request-invalid-hostname-http-error-400-the-request-hostname-is-invalid">make sure to give the host-header flag</a>.</p>
+        <p>To practice, run the server in this folder with:</p>
 
+        <code class="inline-code">npm i -g express</code><br/><br/>
+        <code class="inline-code">node server.js</code>
+
+        <p>Open a new terminal, and run:</p>
+
+        <code class="inline-code">ngrok http -host-header=localhost 8080</code>
+
+        <p>Visit <code>http://{random_id}.ngrok.io/index.html</code> on your laptop of phone and see this page</p>
+        <br/><br/>
     </div>
 
 </body>
