@@ -97,7 +97,15 @@
         <p>Let's connect this local repo with our permanent Github repo, so we can never lose our changes.</p>
         <p>To do this, point to the permanent Github address like so:</p>
         <code class="inline-code">$ git remote add origin git@github.com:{YOUR_USERNAME}/gitfoo.git</code><br>
-        <p>Here, we have added a new remote called 'origin' with the address to your Github repo.</p>
+        <p>Here, we have added a new remote called 'origin' with the address to your Github repo named 'gitfoo'.</p>
+        <p>This can be broken down to a consistent pattern:</p>
+        <code class="inline-code">$ git remote add origin git@{HOST_ADDRESS}:{YOUR_USERNAME}/{REPO_NAME}.git</code><br>
+        <p>To check what remotes you have set, do:</p>
+        <code class="inline-code">$ git remote show</code><br>
+        <code class="inline-code">&nbsp;&nbsp;origin&nbsp;&nbsp;</code><br>
+        <code class="inline-code">$ git remote show origin</code><br>
+        <img class="regular-size-image" src="pics/git_remote_show_origin.png"></img>
+        <p></p>
         <p>If you go back to your browser and look at the Github page for your repo, you'll still see the "Quick setup — if you’ve done this kind of thing before" and instructions.</p>
         <p>Let's change this and push your current code:</p>
         <code class="inline-code">$ git push -u origin master</code><br>
