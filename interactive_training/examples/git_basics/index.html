@@ -1,0 +1,230 @@
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        .inline-code {
+            margin: 10px 0px 10px 40px;
+            display: inline-block;
+        }
+        /*#container {
+            margin-left: 60px;
+            margin-top: 30px;
+        }*/
+        .center {
+            text-align: center;
+        }
+        .regular-size-image {
+            width: 800px;
+            height: 400px;
+            margin: 20px 0px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="center">Basics of Git</h2>
+        <br><br>
+        <p>************************************************************************************************************************************************</p>
+        <h3>INTRO</h3>
+        <p>Enter the command into your terminal wherever you see a <code>$</code> symbol. For example, if you see something like below:</p>
+        <code class="inline-code">$ ls -a</code>
+        <br>
+        <code class="inline-code">.&nbsp;&nbsp;&nbsp;&nbsp;..&nbsp;&nbsp;&nbsp;&nbsp;.git</code>
+        <p>This means you should enter <code>ls -a</code> in your terminal, and <code>.&nbsp;&nbsp;&nbsp;&nbsp;..&nbsp;&nbsp;&nbsp;&nbsp;.git</code> is the expected output.</p>
+
+        <br>
+        <p>Use the command <code>git status</code> constantly to follow along.</p>
+        <p>You can never use <code>git status</code> to often, it does no harm and simply shows you what git is doing.</p>
+        <p>************************************************************************************************************************************************</p>
+        <br><br>
+
+        <h3>Git</h3>
+        <p>Git is a 'version control system', which means it helps you keep track of file changes while you work on a project.</p>
+        <p>Each different project should be its own git repo on Github. From the homepage, click on the "+" button: </p>
+        <img class="regular-size-image" src="pics/new_github_repo.png"></img>
+        <p>From there, pick "New Repository", pick a name, and click the green "Create repository".</p>
+        <p>You will now see a screen like the following:</p>
+        <img class="regular-size-image" src="pics/new_repo_setup.png"></img>
+        <p>Refer back to this Github page if you get stuck following this tutorial.</p>
+        <p>We will be following the "create a new repository on the command line" instructions to make a repository from scratch.</p>
+        <p>Make a folder to contain our sample project. Change to a directory of your choice, then make the folder:</p>
+        <code class="inline-code">$ mkdir gitfoo</code>
+        <p>Change into that folder:</p>
+        <code class="inline-code">$ cd gitfoo</code>
+        <p>Before we make a git repo, check what files are in our <code>gitfoo</code> folder (the -a flag stands for 'list all'):</p>
+        <code class="inline-code">$ ls -a</code><br>
+        <code class="inline-code">.&nbsp;&nbsp;&nbsp;&nbsp;..</code>
+        <p>These items are found in every folder, and this output means you have no files in this directory. The <code>.</code> means 'this current directory', and the <code>..</code> means 'the directory above this directory'.</p>
+        <p>This means our options are to stay here or go up 1 directory, but we have no actual files here.</p>
+        <p>Now turn <code>gitfoo</code> into a git repo by running:</p>
+        <code class="inline-code">$ git init</code>
+        <p>Now list the files again:</p>
+        <code class="inline-code">$ ls -a</code>
+        <br>
+        <code class="inline-code">.&nbsp;&nbsp;&nbsp;&nbsp;..&nbsp;&nbsp;&nbsp;&nbsp;.git</code>
+        <p>This folder was the result of running <code>git init</code>.</p>
+        <p>The contents of the <code>.git</code> folder is pretty complicated, but for now let's peek inside:</p>
+        <code class="inline-code">$ ls .git</code>
+        <br>
+        <code class="inline-code">HEAD&nbsp;&nbsp;&nbsp;config&nbsp;&nbsp;&nbsp;description&nbsp;&nbsp;&nbsp;hooks&nbsp;&nbsp;&nbsp;info&nbsp;&nbsp;&nbsp;objects&nbsp;&nbsp;&nbsp;refs</code>
+        <p>This folder is used to track changes to this repo on your local machine, to store the Github address to push to, etc.</p>
+
+        <br>
+        <h3>Our first commit</h3>
+        <p>First, make a file and a commit:</p>
+        <code class="inline-code">$ echo "practice git project" >> README.md</code><br>
+        <code class="inline-code">$ git add README.md</code><br>
+        <code class="inline-code">$ git status</code>
+        <img class="regular-size-image" src="pics/initial_status.png"></img>
+        <p>This is telling us we have a new file, "README.md", which is ready to be committed.</p>
+        <p>Before we commit, check the logs:</p>
+        <code class="inline-code">$ git log</code><br>
+        <code class="inline-code">fatal: your current branch 'master' does not have any commits yet</code><br>
+        <p>That makes sense, we haven't done anything yet. Now make a new commit:</p>
+        <code class="inline-code">$ git commit -m "Initial commit"</code><br>
+        <img class="regular-size-image" src="pics/initial_commit.png"></img>
+        <p>The -m flag stands for "message". Check the logs again:</p>
+        <code class="inline-code">$ git log</code><br>
+        <img class="regular-size-image" src="pics/initial_log.png"></img>
+
+        <br>
+        <h3>Pushing changes to remote</h3>
+        <p>The changes you make on your machine are not being tracked on Github yet, and if our laptop breaks we lose all our work.</p>
+        <p>We want to push changes to 'remote', in other words, a permanent copy of our repo on a trusted server (like Github or Bitbucket).</p>
+        <p>Let's connect this local repo with our permanent Github repo, so we can never lose our changes.</p>
+        <p>To do this, point to the permanent Github address like so:</p>
+        <code class="inline-code">$ git remote add origin git@github.com:{YOUR_USERNAME}/gitfoo.git</code><br>
+        <p>Here, we have added a new remote called 'origin' with the address to your Github repo named 'gitfoo'.</p>
+        <p>This can be broken down to a consistent pattern:</p>
+        <code class="inline-code">$ git remote add origin git@{HOST_ADDRESS}:{YOUR_USERNAME}/{REPO_NAME}.git</code><br>
+        <p>To check what remotes you have set, do:</p>
+        <code class="inline-code">$ git remote show</code><br>
+        <code class="inline-code">&nbsp;&nbsp;origin&nbsp;&nbsp;</code><br>
+        <code class="inline-code">$ git remote show origin</code><br>
+        <img class="regular-size-image" src="pics/git_remote_show_origin.png"></img>
+        <p></p>
+        <p>If you go back to your browser and look at the Github page for your repo, you'll still see the "Quick setup — if you’ve done this kind of thing before" and instructions.</p>
+        <p>Let's change this and push your current code:</p>
+        <code class="inline-code">$ git push -u origin master</code><br>
+        <p>The -u flag is 'upstream', which basically means to always push to the origin remote and master branch when we have the master brach checked out. From now on, we can simply do <code>git push</code>.</code></p>
+        <p>Now refresh the <a target="_blank" href="https://github.com/{YOUR_USERNAME}/gitfoo">https://github.com/{YOUR_USERNAME}/gitfoo</a> page in your browser. You should see something like:</p>
+        <img class="regular-size-image" src="pics/initial_github_commit_screenshot.png"></img>
+        <p>By pushing your commit to the remote repository, you have tracked your changes on Github.</p>
+
+        <br>
+        <h3>Commits and Staging</h3>
+        <p>Git works by tracking changes in something called a 'commit'. A commit is a piece of work you've done to the project that you want to track.</p>
+        <p>You can track changes you want to keep and make a commit by adding changes to the 'stage', then making a commit.</p>
+        <p>To allow fine control over commits (add 1 file change, add 3 file's changes, add all current file changes, etc), git uses something called the 'stage'.</p>
+        <p>Git uses a stage as an intermediate step, so if you have 5 files with changes but only want to commit changes from 2, you can add those 2 files to the stage, and commit those.</p>
+        <p>This will leave the remaining 3 files with changes untracked, and you could then commit those in a new commit if you wanted.</p>
+        <p>Let's test this out. Make 3 new files:</p>
+        <code class="inline-code">$ echo "new file1" >> file_1</code><br>
+        <code class="inline-code">$ echo "new file2" >> file_2</code><br>
+        <code class="inline-code">$ echo "new file3" >> file_3</code><br>
+        <code class="inline-code">$ ls</code><br>
+        <code class="inline-code">file_1&nbsp;&nbsp;file_2&nbsp;&nbsp;file_3</code><br>
+        <code class="inline-code">$ git status</code><br>
+        <img class="regular-size-image" src="pics/unstaged_files.png"></img>
+        <p>Sometimes you may be working and finish multiple features but you forgot to commit. Now you want to break them up into 2 commits. First, you would add some files to the stage:</p>
+        <code class="inline-code">$ git add file_1 file_2</code><br>
+        <code class="inline-code">$ git status</code><br>
+        <img class="regular-size-image" src="pics/staged_files.png"></img>
+        <p>Notice it says "Changes to be committed:" and lists <code>file_1</code> and <code>file_2</code>.</p>
+        <p>This means if we make a commit, only changes for those 2 files will be saved, while <code>file_3</code> changes won't be tracked.</p>
+        <p>A key thing to understand about the stage is that it is an intermediary step. In other words, files being staged are not permanently tracked in git until you make a commit.</p>
+        <p>To prove this, let's check <code>file_2</code> then remove it from the stage:</p>
+        <code class="inline-code">$ cat file_2 </code><br>
+        <code class="inline-code">new file2</code><br><br>
+        <p><code>cat</code> prints the contents of a file.</p>
+        <code class="inline-code">$ git reset file_2</code><br>
+        <code class="inline-code">$ git status</code><br>
+        <img class="regular-size-image" src="pics/file_2_unstaged.png"></img>
+        <p>This means if we make a commit, we won't track <code>file_2</code>. But <code>file_2</code> is exactly the same:</p>
+        <code class="inline-code">$ cat file_2 </code><br>
+        <code class="inline-code">new file2</code><br><br>
+        <p>Restore <code>file_2</code> to the stage:</p>
+        <code class="inline-code">$ git add file_2</code><br>
+        <p>The status should look the same as before:</p>
+        <code class="inline-code">$ git status</code><br>
+        <img class="regular-size-image" src="pics/staged_files.png"></img>
+        <p>Make a new commit:</p>
+        <code class="inline-code">$ git commit -m "added files 1 and 2"</code><br>
+        <img class="regular-size-image" src="pics/commit_1_and_2.png"></img>
+        <p>Now go to Github in the browser and hit refresh.</p>
+        <p>Notice how nothing changed. This is the difference between the remote server (your project hosted on Github) and your laptop.</p>
+        <p>To permanently update your repo, you have to push your commits to the remote (Github). Do that now:</p>
+        <code class="inline-code">$ git push</code><br>
+        <p>Refresh Github again. Notice you now have 2 commits instead of one.</p>
+        <p>To inspect the commits, click the link that tells you you have 2 commits:</p>
+        <img class="regular-size-image" src="pics/click_commits_link.png"></img>
+        <p>To view an individual commit, click on it like so:</p>
+        <img class="regular-size-image" src="pics/click_on_that_commit.png"></img>
+        <p>You will now see detailed info about this commit, including what files were changed and what was changed:</p>
+        <img class="regular-size-image" src="pics/commit_detail_info.png"></img>
+        <p>This says "you added a line 'new file1' to a file named 'file_1', and you added a line 'new file2' to a file named 'file_2'".</p>
+        <p>Notice since we never added <code>file_3</code> to the stage, it doesn't show up on Github.</p>
+
+        <br>
+        <h3>Branches</h3>
+        <p>Branches in git are separately contained segments of your project that usually denote 1 feature or piece of work.</p>
+        <p>Branches keep new features isolated so you don't break your coworker's code while you work on something new. Always use branches if you're working on a separate feature and your team uses the same code.</p>
+        <p>Check what branches you have. When you make a new repo, the default branch 'master' is made for you:</p>
+        <code class="inline-code">$ git branch</code><br>
+        <code class="inline-code">* master</code><br>
+        <p>You've been assigned to get this project going by adding user login. Let's make a new branch so we can safely work on this without affecting our coworkers:</p>
+        <code class="inline-code">$ git checkout -b feature/user-login</code><br>
+        <img class="regular-size-image" src="pics/new_branch.png"></img>
+        <p>This command is a 2-for-1 to make us a new branch, and also 'check it out'. Checking out a branch means we are currently working on it, and will see the files for that branch.</p>
+        <p>To see this, let's make a new commit here to start our feature:</p>
+        <code class="inline-code">$ echo "// starting user login" >> login.js</code><br>
+        <code class="inline-code">$ git add login.js</code><br>
+        <code class="inline-code">$ git commit -m "starting login feature"</code><br>
+        <p>Let's also clean up our file_3 for clarity:</p>
+        <code class="inline-code">$ rm file_3</code><br>
+        <code class="inline-code">$ git status</code><br>
+        <img class="regular-size-image" src="pics/user_login_status_clean.png"></img>
+        <br>
+        <code class="inline-code">$ git log</code><br>
+        <img class="regular-size-image" src="pics/log_on_login_branch.png"></img>
+        <p>Now go back to <code>master</code> and notice the missing commit:</p>
+        <code class="inline-code">$ git checkout master</code><br>
+        <img class="regular-size-image" src="pics/log_on_master.png"></img>
+        <p>This is because our last commit is on the <code>feature/user-login</code> branch, not master.</p>
+        <p>See how this keeps your code isolated and leaves 1 clean branch, <code>master</code>, with unbroken code?</p>
+
+        <br>
+        <h3>Merging in completed feature branches</h3>
+        <p>Let's say we've finished our login feature branch and we want to merge it in.</p>
+        <p>To merge, checkout the branch you want to merge <i>into</i>.</p>
+        <p>This is generally going to be <code>master</code> or <code>develop</code>. Let's merge our login feature into <code>master</code>:</p>
+        <code class="inline-code">$ git checkout master</code><br>
+        <code class="inline-code">$ git merge feature/user-login</code><br>
+        <img class="regular-size-image" src="pics/merged.png"></img>
+        <p>Now the commit we made on the <code>feature/user-login</code> branch will show up:</p>
+        <code class="inline-code">$ git log</code><br>
+        <img class="regular-size-image" src="pics/log_with_merged_commit.png"></img>
+        <p>The 'starting login feature' commit is now a part of <code>master</code>. In a real project, you would probably see many commits from your feature branch.</p>
+
+        <br>
+        <h3>Deleting old feature branches</h3>
+        <p>Now that we are done with our feature, we can delete the old branch to keep our repo organized.</p>
+        <p>Check your branches:</p>
+        <code class="inline-code">$ git branch</code><br>
+        <img class="regular-size-image" src="pics/current_branches.png"></img>
+        <p>Delete it on your local machine:</p>
+        <code class="inline-code">$ git branch -D feature/user-login</code><br>
+        <p>Delete it on your Github remote repository:</p>
+        <code class="inline-code">$ git push origin --delete feature/user-login</code><br>
+        <p>Check that it's gone:</p>
+        <code class="inline-code">$ git branch</code><br>
+        <img class="regular-size-image" src="pics/deleted_branch_is_gone.png"></img>
+
+        <h3>Summary</h3>
+        <p>That's all you need to get started working on your group projects using git. See the in depth video tutorials for more info:</p>
+        <p style="margin-left: 40px;"><a target="_blank" href="https://github.com/Multishifties/No-Nonsense-Github-Project">Git in an hour</a></p>
+        <br><br><br><br><br><br><br><br>
+    </div>
