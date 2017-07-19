@@ -28,7 +28,7 @@ Hi All! Below are all the supplemental videos we've had so far. Included are als
 
 - - -
 
-### [Unit 4 - Intro to jQuery](01-Class-Content/04-jquery/02-Homework)
+### Unit 4 - Intro to jQuery
 
 [Complete Playlist (Exercises)](https://www.youtube.com/playlist?list=PLgJ8UgkiorCn05TQ1Ui8_lTnhizYcEFX7)
 
