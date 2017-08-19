@@ -102,8 +102,18 @@ Hi All! Below are all the supplemental videos we've had so far. Included are als
 
 [Complete Playlist (Exercises)](https://www.youtube.com/watch?v=cMAIbAJcvZo&list=PLgJ8UgkiorCk9lJ4G-uQkCyGeKlquugNI)
 
+[Homework Solution Video](https://www.youtube.com/watch?v=pieNMQU3oDw)
+
 - - -
 
 ### Unit 15 - Sequelize
 
 [Complete Playlist (Exercises)](https://www.youtube.com/watch?v=dt9mXaEEAkM&list=PLgJ8UgkiorClj-MYE-wm4J6vfVA3-VqWc)
+
+[Homework Solution Video](https://www.youtube.com/watch?v=F-zNZIQVc-8)
+
+- - -
+
+### Unit 18 - MongoDB
+
+[Complete Playlist (Exercises)](https://www.youtube.com/watch?v=Ci1bui7w75k&list=PLgJ8UgkiorCk7zT1kKGwSogEcJbVBzzH8)
