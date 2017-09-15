@@ -112,19 +112,19 @@ Live Office Hours: 45 minutes before class and 30 minutes after class
 |	18.3	|	Sat, Aug 19, 2017	|	Sat, Aug 19, 2017	|	Mongoose ORM	|																							
 |	19.1	|	Mon, Aug 21, 2017	|	Tue, Aug 22, 2017	|	Intro to React.js	|																							
 |	19.2	|	Wed, Aug 23, 2017	|	Thu, Aug 24, 2017	|	React States and Props	|																							
-|	19.3	|	Sat, Aug 26, 2017	|	Sat, Aug 26, 2017	|	MERN Stack (Mongo, Express, React, Node)	|																							
-|	20.1	|	Mon, Aug 28, 2017	|	Tue, Aug 29, 2017	|	Intro to PHP	|																							
-|	20.2	|	Wed, Aug 30, 2017	|	Thu, Aug 31, 2017	|	Intro to Laravel	|																							
+|	19.3	|	Sat, Aug 26, 2017	|	Sat, Aug 26, 2017	|	No Class - Inclement Weather	|																							
+|	20.1	|	Mon, Aug 28, 2017	|	Tue, Aug 29, 2017	|	MERN Stack (Mongo, Express, React, Node)	|																							
+|	20.2	|	Wed, Aug 30, 2017	|	Thu, Aug 31, 2017	| React Native	|																							
 |		|	Sat, Sep 2, 2017	|	Sat, Sep 2, 2017	|	Labor Day Holiday	|																							
 |		|	Mon, Sep 4, 2017	|	Tue, Sep 5, 2017	|	Labor Day Holiday/Extra Help Day 	|																							
-|	20.3	|	Wed, Sep 6, 2017	|	Thu, Sep 7, 2017	|	Laravel	|																							
-|	21.1	|	Sat, Sep 9, 2017	|	Sat, Sep 9, 2017	|	React Native	|																							
-|	21.2	|	Mon, Sep 11, 2017	|	Tue, Sep 12, 2017	|	React Native	|																							
-|	21.3	|	Wed, Sep 13, 2017	|	Thu, Sep 14, 2017	|	React Native / Intro to Project # 3	|																							
-|	22.1	|	Sat, Sep 16, 2017	|	Sat, Sep 16, 2017	|	Search & Sort Algorithms  / Project Work	|																							
-|	22.2	|	Mon, Sep 18, 2017	|	Tue, Sep 19, 2017	|	Intro to Data Structures / Project Work	|																							
-|	22.3	|	Wed, Sep 20, 2017	|	Thu, Sep 21, 2017	|	Intro to Design Patterns / Project Work	|																							
-|	23.1	|	Sat, Sep 23, 2017	|	Sat, Sep 23, 2017	|	Three Programming Languages (Ruby)	|																							
-|	23.2	|	Mon, Sep 25, 2017	|	Tue, Sep 26, 2017	|	Three Programming Languages (Java)	|																							
-|	23.3	|	Wed, Sep 27, 2017	|	Thu, Sep 28, 2017	|	Three Programming Languages (Python)	|																							
+|	20.3	|	Wed, Sep 6, 2017	|	Thu, Sep 7, 2017	|	React Native	|																							
+|	21.1	|	Sat, Sep 9, 2017	|	Sat, Sep 9, 2017	|	React Native / Intro to Project #3	|																							
+|	21.2	|	Mon, Sep 11, 2017	|	Tue, Sep 12, 2017	|	Intro to PHP	|																							
+|	21.3	|	Wed, Sep 13, 2017	|	Thu, Sep 14, 2017	|	Intro to Laravel	|																							
+|	22.1	|	Sat, Sep 16, 2017	|	Sat, Sep 16, 2017	|	Laravel	|																							
+|	22.2	|	Mon, Sep 18, 2017	|	Tue, Sep 19, 2017	|	Search & Sort Algorithms / Project Work	|																							
+|	22.3	|	Wed, Sep 20, 2017	|	Thu, Sep 21, 2017	|	Intro to Data Structures / Project Work	|																							
+|	23.1	|	Sat, Sep 23, 2017	|	Sat, Sep 23, 2017	|	Intro to Design Patterns / Project Work	|																							
+|	23.2	|	Mon, Sep 25, 2017	|	Tue, Sep 26, 2017	|	Project Work	|																							
+|	23.3	|	Wed, Sep 27, 2017	|	Thu, Sep 28, 2017	|	Project Work	|																							
 |		|	Sat, Sep 30, 2017	|	Sat, Sep 30, 2017	|	Final Project Presentations	|																																											
